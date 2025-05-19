@@ -1,0 +1,42 @@
+{
+  "name": "ynet-electron-agent",
+  "version": "1.0.0",
+  "description": "YNet Windows agent Electron app for system data collection and remote commands",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "author": "YNet",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^25.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@mui/material": "^5.13.7",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "sqlite3": "^5.1.6",
+    "axios": "^1.4.0",
+    "jsonwebtoken": "^9.0.0",
+    "node-machine-id": "^1.1.12"
+  },
+  "devDependencies": {
+    "electron-builder": "^23.6.0",
+    "typescript": "^5.0.4",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11"
+  },
+  "build": {
+    "appId": "com.ynet.agent",
+    "win": {
+      "target": "nsis",
+      "requestedExecutionLevel": "requireAdministrator",
+      "shortcutName": "YNet Agent"
+    },
+    "directories": {
+      "buildResources": "assets",
+      "output": "dist"
+    }
+  }
+}
